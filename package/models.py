@@ -8,4 +8,8 @@ class Package(models.Model):
     guid = models.CharField('Package_guid', max_length=40)
 
     def __unicode__(self):
-        return '%s %s (%s)'% (self.nomer, self.courier, self.user)
+        return '%s %s (%s)' % (self.nomer, self.courier, self.user)
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        pass
